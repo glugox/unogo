@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/../my-unogo-app/.idea/my-unogo-app.iml" filepath="$PROJECT_DIR$/../my-unogo-app/.idea/my-unogo-app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/unogo.iml" filepath="$PROJECT_DIR$/.idea/unogo.iml" />
+    </modules>
+  </component>
+</project>
