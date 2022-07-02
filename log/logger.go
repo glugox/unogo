@@ -47,10 +47,11 @@ func (logger *Logger) SetName(name string) *Logger {
 func (logger *Logger) PushDefaultHandler() {
 	currentDir, _ := os.Getwd()
 	dir := path.Join(currentDir, "storage", "logs")
-	filename := path.Join(dir, "unogo.log")
+	// filename := path.Join(dir, "unogo.log")
 	err := os.MkdirAll(dir, os.ModePerm)
 	if err == nil {
-		h := handler.NewFileHandler(filename, record.DEBUG)
+		//h := handler.NewFileHandler(filename, record.DEBUG)
+		h := handler.NewConsoleHandler(record.DEBUG)
 		logger.PushHandler(h)
 	}
 }
