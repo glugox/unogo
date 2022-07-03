@@ -35,6 +35,15 @@ func SnakeCase(s string) string {
 	return v
 }
 
+// CamelCase Convert a value to studly caps case, xx_yy to xxYy
+func CamelCase(s string) string {
+	sc := StudlyCase(s)
+	if len(sc) == 0 {
+		return ""
+	}
+	return strings.ToLower(sc[0:1]) + sc[1:]
+}
+
 // StudlyCase Convert a value to studly caps case, xx_yy to XxYy
 func StudlyCase(s string) string {
 	if v, ok := studlyCache[s]; ok {
