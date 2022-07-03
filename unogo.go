@@ -9,6 +9,7 @@ import (
 	"github.com/glugox/unogo/helper"
 	"github.com/glugox/unogo/log"
 	"github.com/glugox/unogo/log/record"
+	"github.com/glugox/unogo/orm"
 	"github.com/glugox/unogo/router"
 	"github.com/glugox/unogo/uno"
 )
@@ -35,6 +36,15 @@ func SetupLogger() *log.Logger {
 func New() *Uno {
 	application := uno.NewApplication()
 	application.Logger = log.NewLogger("local", record.DEBUG)
+
+	// Configure DB connection
+	config := orm.Config{
+		Driver: "mysql",
+		Dsn:    "root:root@tcp(127.0.0.1:3306)/unogo?charset=utf8&parseTime=true",
+	}
+	db, _ := orm.Open(config)
+
+	application.DB = db
 	t := &Uno{
 		App: application,
 	}

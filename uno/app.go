@@ -2,6 +2,7 @@ package uno
 
 import (
 	"github.com/glugox/unogo/log"
+	"github.com/glugox/unogo/orm"
 	"github.com/glugox/unogo/router"
 )
 
@@ -9,6 +10,7 @@ type Application struct {
 	Env    string
 	Debug  bool
 	Logger *log.Logger
+	DB     *orm.Connection
 	route  *router.Route
 }
 

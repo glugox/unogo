@@ -5,11 +5,11 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Attach to Process",
+            "name": "Launch Package",
             "type": "go",
-            "request": "attach",
-            "mode": "local",
-            "processId": 0
-        }
+            "request": "launch",
+            "mode": "auto",
+            "program": "../my-unogo-app/main.go"
+        } 
     ]
 }
